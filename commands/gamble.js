@@ -14,7 +14,7 @@ module.exports = {
         let content = "";
         let all = false;
         const money = userData[message.guild.id + message.author.id].money;
-        
+
         if (!args[0]) {
             message.reply("no se quant vols apostar!");
             return message.channel.send(server.prefix + "help gamble");
@@ -39,7 +39,7 @@ module.exports = {
         }
 
         // Comprovem si doble o nada
-        let coin = Math.round(Math.random()); // We round between 0-1 so we have randomly true or false
+        let coin = 1; // We round between 0-1 so we have randomly true or false
         if (coin === 1) {
             // Doble
             userData[message.guild.id + message.author.id].money += parseInt(amount);
